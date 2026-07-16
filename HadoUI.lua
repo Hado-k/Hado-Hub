@@ -7,12 +7,15 @@
     ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝ ╚═╝
 
     HadoUI — Premium purple UI framework by Hado
-    Version 1.0.0
+    Version 2.0.0
+    Repo: https://github.com/Hado-k/Hado-Hub
 
     ── QUICK START ────────────────────────────────────────────────
-    local HadoUI = loadstring(readfile("HadoUI/HadoUI.lua"))()
-    -- (or paste this whole file above your script; it returns the library
-    --  and also sets getgenv().HadoUI)
+    -- Load straight from GitHub (recommended for distribution):
+    local HadoUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hado-k/Hado-Hub/main/HadoUI.lua"))()
+    -- ...or from your executor workspace: loadstring(readfile("HadoUI/HadoUI.lua"))()
+    -- ...or paste this whole file above your script. Either way it returns the
+    --    library and also sets getgenv().HadoUI.
 
     local Window = HadoUI:CreateWindow({
         Name     = "My Script",        -- shown in top bar
