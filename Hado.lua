@@ -1,9 +1,13 @@
 --[[  Hado Hub — your script hub, built on HadoUI.
-      Assumes the library is already loaded (getgenv().HadoUI) or pasted above.
+      Repo: https://github.com/Hado-k/Hado-Hub
+      One-shot loader:
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Hado-k/Hado-Hub/main/Hado.lua"))()
       Edit the Name/Version/features below; wire your functions into the Callbacks. ]]
 
+-- use the library if it's already loaded, otherwise fetch it from GitHub
 local HadoUI = getgenv().HadoUI
-assert(HadoUI, "HadoUI library not loaded — run HadoUI.lua first")
+    or loadstring(game:HttpGet("https://raw.githubusercontent.com/Hado-k/Hado-Hub/main/HadoUI.lua"))()
+assert(HadoUI, "Failed to load HadoUI library")
 
 local Window = HadoUI:CreateWindow({
     Name       = "Hado Hub",
