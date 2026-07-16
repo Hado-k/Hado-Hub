@@ -56,7 +56,17 @@
 
 ## Installation
 
-**Option A — paste it in.** Put the entire contents of `HadoUI.lua` at the top of your script. It returns the library and also sets `getgenv().HadoUI`.
+**Option A — loadstring from GitHub** *(recommended)*. Loads the latest version straight from the repo:
+
+```lua
+local HadoUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hado-k/Hado-Hub/main/HadoUI.lua"))()
+```
+
+Or run the ready-made hub in one line:
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hado-k/Hado-Hub/main/Hado.lua"))()
+```
 
 **Option B — load from your executor workspace.** Put `HadoUI.lua` in your executor's `workspace/HadoUI/` folder:
 
@@ -64,11 +74,7 @@
 local HadoUI = loadstring(readfile("HadoUI/HadoUI.lua"))()
 ```
 
-**Option C — loadstring from the web** (host the file yourself, e.g. hadoscripts.com):
-
-```lua
-local HadoUI = loadstring(game:HttpGet("https://yoursite.com/HadoUI.lua"))()
-```
+**Option C — paste it in.** Put the entire contents of `HadoUI.lua` at the top of your script. It returns the library and also sets `getgenv().HadoUI`.
 
 > **Custom logo:** put a square `icon.png` inside the executor's `HadoUI/` workspace folder and it is picked up automatically, or pass `Icon = "rbxassetid://ID"` to `CreateWindow`.
 
